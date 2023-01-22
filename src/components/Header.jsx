@@ -1,4 +1,5 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import logo from "./realtor.svg";
 
 export default function Header() {
   const location = useLocation();
@@ -15,7 +16,7 @@ export default function Header() {
       <header className="flex justify-between items-center px-3 max-w-6xl mx-auto">
         <div>
           <img
-            src="https://static.rdc.moveaws.com/images/logos/rdc-logo-default.svg"
+            src={logo}
             alt="company logo"
             className="h-5 cursor-pointer"
             onClick={() => navigate("/")}
@@ -27,25 +28,22 @@ export default function Header() {
               className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
                 pathMatchRoute("/") && "text-black border-b-red-500"
               }`}
-              onClick={() => navigate("/")}
             >
-              Home
+              <Link to="/">Home</Link>
             </li>
             <li
               className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
                 pathMatchRoute("/offers") && "text-black border-b-red-500"
               }`}
-              onClick={() => navigate("/offers")}
             >
-              Offers
+              <Link to="/offers">Offers</Link>
             </li>
             <li
               className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
                 pathMatchRoute("/sign-in") && "text-black border-b-red-500"
               }`}
-              onClick={() => navigate("/sign-in")}
             >
-              Sign In
+              <Link to="/sign-in">Sign In</Link>
             </li>
           </ul>
         </div>
