@@ -85,6 +85,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 07-Complete_forgot_password_functionality
 
+08-Create_private_route_Protect_profile_page_Add_logout_functionality
+
 1:32:11 Create Sign in, Sign up and Forgot password pages and OAuth component
 2:58:11 Install Firebase and react-toastify and sign up the user
 4:10:01 Complete the OAuth functionality
