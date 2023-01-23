@@ -1,6 +1,9 @@
-import { getAuth } from "firebase/auth";
+import { getAuth, updateProfile } from "firebase/auth";
+import { doc, updateDoc } from "firebase/firestore";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { db } from "../firebase";
 
 export default function Profile() {
   const auth = getAuth();
@@ -9,9 +12,34 @@ export default function Profile() {
     email: auth.currentUser.email,
   });
   const { name, email } = formData;
+  const [changeDetail, setChangeDetail] = useState(false);
 
   function onLogout() {
     auth.signOut();
+  }
+
+  function onChange(e) {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value,
+    }));
+  }
+
+  async function onSubmit() {
+    try {
+      if (auth.currentUser.displayName !== name) {
+        // Update displayName in firebase auth
+        await updateProfile(auth.currentUser, {
+          displayName: name,
+        });
+        // Update the name in the firestore
+        const docRef = doc(db, "users", auth.currentUser.uid);
+        await updateDoc(docRef, { name });
+      }
+      toast.success("User Profile updated!");
+    } catch (error) {
+      toast.error("Could not update user profile!");
+    }
   }
 
   return (
@@ -24,8 +52,11 @@ export default function Profile() {
               type="text"
               id="name"
               value={name}
-              disabled
-              className="w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out mb-6"
+              disabled={!changeDetail}
+              onChange={onChange}
+              className={`w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out mb-6 ${
+                changeDetail && "bg-red-200 focus:bg-red-200"
+              }`}
             />
             <input
               type="email"
@@ -37,12 +68,15 @@ export default function Profile() {
 
             <div className="flex justify-between whitespace-nowrap text-sm sm:text-lg ">
               <p className="mb-6 ">
-                Do you want to edit your Profile?
+                Do you want to edit the user name?
                 <Link
-                  to="/sign-up"
                   className="text-red-600 hover:text-red-800 transition duration-200 ease-in-out ml-2"
+                  onClick={() => {
+                    changeDetail && onSubmit();
+                    setChangeDetail((prevState) => !prevState);
+                  }}
                 >
-                  Edit
+                  {changeDetail ? "Apply change" : "Edit"}
                 </Link>
               </p>
               <p>
