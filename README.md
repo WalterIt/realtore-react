@@ -79,6 +79,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 04-Install_Firebase_react-toastify_Sign-up_User
 
+05-Complete_OAuth_functionality
+
 1:32:11 Create Sign in, Sign up and Forgot password pages and OAuth component
 2:58:11 Install Firebase and react-toastify and sign up the user
 4:10:01 Complete the OAuth functionality
