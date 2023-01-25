@@ -93,6 +93,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 11-Create_spinner-component
 
+12-Create_listing_page_UI
+
+13-Implement_onChange_onSubmit_functions_in_create_listing_page
+
+14-Add_listings_section_to_profile_page-create_listingItem_component
+
 1:32:11 Create Sign in, Sign up and Forgot password pages and OAuth component
 2:58:11 Install Firebase and react-toastify and sign up the user
 4:10:01 Complete the OAuth functionality
