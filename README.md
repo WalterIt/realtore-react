@@ -99,16 +99,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 14-Add_listings_section_to_profile_page-create_listingItem_component
 
-1:32:11 Create Sign in, Sign up and Forgot password pages and OAuth component
-2:58:11 Install Firebase and react-toastify and sign up the user
-4:10:01 Complete the OAuth functionality
-4:31:26 Complete the Sign in functionality
-4:41:14 Complete the forgot password page functionality
-4:51:01 Create private route and custom hook for protecting the profile page and add the logout functionality
-5:46:41 Add the edit functionality to the profile page
-6:10:01 Complete the header component and make it dynamic
-6:22:16 Create the spinner component
-6:36:59 Create the create listing page UI
-8:19:25 Add functionality including onChange and onSubmit functions to the create listing page
-10:16:16 Add my listings section to the profile page and create the listingItem component
-10:53:38 Complete the listingItem component
+15-Implement_listingItem_component
