@@ -100,3 +100,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 14-Add_listings_section_to_profile_page-create_listingItem_component
 
 15-Implement_listingItem_component
+
+16-Implement_add_delete_functionality_to_listing_section
+
+00:00 Add delete and edit functionality to the my listing section
+25:22 Create EditListing page
+56:41 Create listing page and use Swiper to add the image slider
+1:30:32 Add share copy functionality
+1:46:59 Add the listing information to the listing page
+2:34:10 Create the landlord contact component
+3:24:24 Add map to the listing page using leaflet and react-leaflet
+3:44:24 Create slider component and add it to the home page
+4:28:42 Complete home page by adding recent offers, places for rent and place for sale
+5:10:53 Complete the offers page
+5:45:25 Create the places for rent and sale pages
+5:58:33 Deploy to vercel

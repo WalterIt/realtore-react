@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import moment from "moment";
 import { MdLocationOn } from "react-icons/md";
+import { FaTrash } from "react-icons/fa";
+import { MdEdit } from "react-icons/md";
 
-export default function ListingItem({ listing, id }) {
+export default function ListingItem({ listing, id, onDelete, onEdit }) {
   // console.log(new Date(listing.timestamp.seconds * 1000));
 
   const date = listing.timestamp?.toDate();
@@ -57,6 +59,18 @@ export default function ListingItem({ listing, id }) {
           </div>
         </div>
       </Link>
+      {onDelete && (
+        <FaTrash
+          className="absolute bottom-2 right-2 h-[14px] cursor-pointer text-red-500"
+          onClick={() => onDelete(listing.id)}
+        />
+      )}
+      {onEdit && (
+        <MdEdit
+          className="absolute bottom-2 right-7 h-4 cursor-pointer text-blue-800"
+          onClick={() => onEdit(listing.id)}
+        />
+      )}
     </li>
   );
 }
