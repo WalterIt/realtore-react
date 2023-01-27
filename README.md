@@ -103,6 +103,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 16-Implement_add_delete_functionality_to_listing_section
 
+17-Create_EditListing_page
+
+18-Create_listing_page_Use_Swiper_to_add_image_slider
+
 00:00 Add delete and edit functionality to the my listing section
 25:22 Create EditListing page
 56:41 Create listing page and use Swiper to add the image slider
