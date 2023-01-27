@@ -5,7 +5,6 @@ import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 import { toast } from "react-toastify";
 
 import OAuth from "../components/OAuth";
-import { async } from "@firebase/util";
 
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
