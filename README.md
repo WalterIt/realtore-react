@@ -111,6 +111,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 20-Add_listing_information_to_listing_page
 
+21-Create_landlord_contact_component
+
 00:00 Add delete and edit functionality to the my listing section
 25:22 Create EditListing page
 56:41 Create listing page and use Swiper to add the image slider
