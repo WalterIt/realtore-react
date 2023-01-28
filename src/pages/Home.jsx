@@ -26,7 +26,7 @@ export default function Home() {
         listingsRef,
         where("offer", "==", true),
         orderBy("timestamp", "desc"),
-        limit(4)
+        limit(5)
       );
       const querySnap = await getDocs(q);
       let listings = [];
@@ -50,7 +50,7 @@ export default function Home() {
         listingsRef,
         where("type", "==", "rent"),
         orderBy("timestamp", "desc"),
-        limit(4)
+        limit(5)
       );
       const querySnap = await getDocs(q);
       let listings = [];
@@ -74,7 +74,7 @@ export default function Home() {
         listingsRef,
         where("type", "==", "rent"),
         orderBy("timestamp", "desc"),
-        limit(4)
+        limit(5)
       );
       const querySnap = await getDocs(q);
       let listings = [];
@@ -98,7 +98,7 @@ export default function Home() {
         listingsRef,
         where("type", "==", "sale"),
         orderBy("timestamp", "desc"),
-        limit(4)
+        limit(5)
       );
       const querySnap = await getDocs(q);
       let listings = [];
@@ -126,7 +126,7 @@ export default function Home() {
                 Show more Offers
               </p>
             </Link>
-            <ul className="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mt-3 mb-1">
+            <ul className="sm:grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 mt-3 mb-1">
               {offerListings.map((listing) => (
                 <ListingItem
                   key={listing.id}
@@ -150,7 +150,7 @@ export default function Home() {
                 Show more places for Rent
               </p>
             </Link>
-            <ul className="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mt-3 mb-1">
+            <ul className="sm:grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 mt-3 mb-1">
               {rentListings.map((listing) => (
                 <ListingItem
                   key={listing.id}
@@ -174,7 +174,7 @@ export default function Home() {
                 Show more places for Sale
               </p>
             </Link>
-            <ul className="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mt-3 mb-1">
+            <ul className="sm:grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 mt-3 mb-1">
               {saleListings.map((listing) => (
                 <ListingItem
                   key={listing.id}
