@@ -115,7 +115,7 @@ export default function Listing() {
                 ${" "}
                 {(+listing.regularPrice - +listing.discountPrice)
                   .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
                 discount
               </p>
             )}
