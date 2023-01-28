@@ -119,6 +119,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 24-Add_recent_offers_places_for_rent-sale_to_home_page
 
+25-Implement_offers_page
+
+26-Implement_Pages_rent-sale
+
 00:00 Add delete and edit functionality to the my listing section
 25:22 Create EditListing page
 56:41 Create listing page and use Swiper to add the image slider
