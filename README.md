@@ -115,6 +115,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 22-Add_map_to_listing_page_using_leaflet_react-leaflet
 
+23-Create_slider_component_Add_it_to_home_page
+
+24-Add_recent_offers_places_for_rent-sale_to_home_page
+
 00:00 Add delete and edit functionality to the my listing section
 25:22 Create EditListing page
 56:41 Create listing page and use Swiper to add the image slider
