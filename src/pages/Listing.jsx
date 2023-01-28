@@ -108,11 +108,15 @@ export default function Listing() {
           </div>
           <div className="flex items-center space-x-4 w-[75%] mt-4">
             <p className="bg-red-800 w-full max-w-[200px] rounded-md p-1 text-white text-center font-semibold shadow-md">
-              {listing.type === "rent" ? "Rent" : "Sale"}{" "}
+              {listing.type === "rent" ? "Rent" : "Sale"}
             </p>
             {listing.offer && (
               <p className="bg-green-800 w-full max-w-[200px] rounded-md p-1 text-white text-center font-semibold shadow-md">
-                $ {+listing.regularPrice - +listing.discountPrice} discount
+                ${" "}
+                {(+listing.regularPrice - +listing.discountPrice)
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                discount
               </p>
             )}
           </div>
