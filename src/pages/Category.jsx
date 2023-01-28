@@ -95,6 +95,13 @@ export default function Category() {
         </div>
       )}
 
+      {/*!offerListings && (
+        <p>
+          There is no place for{" "}
+          {params.categoryName === "rent" ? "Renting" : "Sale"}{" "}
+        </p>
+      )*/}
+
       {lastfetchedListing && (
         <div className="flex items-center justify-center">
           <button
